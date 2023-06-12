@@ -6,6 +6,7 @@ import Dashboard from './components/dashboard/dashboard';
 import Login from './components/login/login';
 import Signup from './components/signup/signup';
 import Blog from './components/blogs/blog/blog';
+import Transfer from './components/dashboard/transfer/transfer';
 function App() {
   const dataSource = [
     {
@@ -58,6 +59,8 @@ function App() {
           <Route path="/blogs" element={<Blogs blogs={blogs} removeBlog={removeBlog} />} />
           <Route path="/blog/:id" element={<Blog blogs={blogs} addBlog={addBlog} updateBlog={updateBlog}/>} />
           <Route path="/blog" element={<Blog  blogs={blogs} addBlog={addBlog} updateBlog={updateBlog} />} />
+          <Route path="/transfer/:id" element={<Transfer/>} />
+          <Route path="/transfer" element={<Transfer/>} />
         </Routes>
       </div>
     </Router>
